@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f5f8;
+    padding: 20px;
+    /* Add padding for spacing */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    /* Add background color */
+    padding: 10px 20px;
+    /* Add padding for spacing */
+}
+
+.logo {
+    display: flex;
+    font-size: 24px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b {
+    font-size: 40px;
+    color: #7f00ff;
+}
+
+.navItems {
+    display: none;
+}
+
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a {
+    display: none;
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: #3d535f;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a,
+.links a:hover {
+    color: #7f00ff;
+}
+
+.links a {
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+
+
+.btns {
+    width: 100%;
+
+}
+
+.btns a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: #7f00ff;
+}
+
+/* Add media query for mobile */
+@media (max-width: 768px) {
+    .navItems {
+        display: block;
+    }
+
+    .navItems li {
+        margin: 5px 0;
+        /* Adjust spacing */
+    }
+
+    .logo {
+        font-size: 20px;
+        /* Further reduce font size */
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    /* Stack columns on mobile */
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapper::before {
+    position: absolute;
+    content: '';
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object1 6s linear infinite;
+}
+
+.wrapper::after {
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object2 6s linear infinite;
+}
+
+@keyframes object1 {
+    50% {
+        left: -13%;
+        top: 41%;
+    }
+}
+
+@keyframes object2 {
+    50% {
+        left: 35%;
+        top: 10%;
+    }
+}
+
+.cols0 {
+    width: 60%;
+    z-index: 5;
+}
+
+.cols {
+    width: 50%;
+}
+
+.topline {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+}
+
+.topline::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #7f00ff;
+}
+
+h1 {
+    display: block;
+    font-size: 5em;
+    font-weight: 900;
+    color: #3d535f;
+}
+
+.multiText {
+    color: #7f00ff;
+    text-transform: capitalize;
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: #3d535f;
+}
+
+.btns {
+    width: 100%;
+    text-align: center;
+    /* Center buttons */
+    margin-top: 20px;
+    /* Add spacing */
+}
+
+button {
+    font-size: 18px;
+    /* Adjust font size */
+    padding: 10px 20px;
+    /* Adjust padding */
+    margin: 10px;
+    /* Adjust margin */
+}
+
+.imgbox {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Hide overflow on small screens */
+}
+
+#splash{
+    display: none;
+}
+
+.imgbox img {
+    width: 100%;
+    /* Adjust image width */
+    height: auto;
+    /* Auto adjust height */
+    position: relative;
+    top: 0;
+    right: 0;
+    animation: none;
+    /* Remove animation for small screens */
+}
+
+/* Remove keyframes for small screens */
